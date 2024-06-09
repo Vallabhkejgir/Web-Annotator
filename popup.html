@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Annotator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .search,
+      .color-picker,
+      .note,
+      .buttons {
+        margin: 20px 0;
+      }
+      .color-picker label,
+      .note label {
+        margin-right: 10px;
+      }
+      #annotations-list {
+        margin-top: 30px;
+      }
+      .buttons button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Web Annotator</h2>
+
+      <div class="search">
+        <input type="text" id="search" placeholder="Search annotations..." />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div class="color-picker">
+        <label for="highlight-color">Highlight Color:</label>
+        <input type="color" id="highlight-color" value="#ffff00" />
+      </div>
+
+      <div class="buttons">
+        <button id="highlight-btn">Highlight</button>
+      </div>
+
+      <div class="note">
+        <label for="note">Add a note:</label>
+        <textarea
+          id="note"
+          rows="4"
+          cols="30"
+          placeholder="Type your note here..."
+        ></textarea>
+      </div>
+
+      <div class="buttons">
+        <button id="save-note-btn">Save Note</button>
+        <button id="export-btn">Export Annotations</button>
+        <button id="delete-note-btn">Delete Note</button>
+      </div>
+
+      <div id="annotations-list"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
